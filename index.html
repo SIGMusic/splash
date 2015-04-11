@@ -79,7 +79,24 @@
 				<section id="isthismusic">
 					<h2>Is this music?</h2>
 					<section>
-						<!-- TODO musical corner cases -->
+						<iframe data-autoplay width="840" height="630"
+								src="https://www.youtube.com/embed/t1ZF7jMK00w?start=8"
+								frameborder="0" allowfullscreen></iframe>
+					</section>
+					<section>
+						<iframe data-autoplay width="840" height="630"
+								src="https://www.youtube.com/embed/i0djHJBAP3U?start=30"
+								frameborder="0" allowfullscreen></iframe>
+					</section>
+					<section>
+						<iframe data-autoplay width="840" height="630"
+								src="https://www.youtube.com/embed/E2j-frfK-yg?start=15"
+								frameborder="0" allowfullscreen></iframe>
+					</section>
+					<section>
+						<iframe data-autoplay width="840" height="630"
+								src="https://www.youtube.com/embed/odB-9jmti2U?start=2"
+								frameborder="0" allowfullscreen></iframe>
 					</section>
 				</section>
 				
@@ -97,13 +114,27 @@
 				<!-- 5 minutes -->
 				<section id="chuck-demo">
 					<h2><a href="http://chuck.cs.princeton.edu/">ChucK</a> Demo</h2>
+					<pre><code data-trim>
+SinOsc s => JCRev r => dac;
+0.15 => r.mix;
+0.7 => r.gain;
+
+0.5 => dac.gain;
+
+while (true) {
+	Math.random2(50, 80) => float f;
+	<<< f >>>;
+	Std.mtof(f) => s.freq;
+	100::ms => now;
+}
+					</code></pre>
 				</section>
 				
 				<!-- after 25 minutes -->
 				<!-- 10 minutes -->
 				<section id="human-cosmos">
-					<h2><a href="acm.illinois.edu/sigmusic/cosmos/">
-						Human Cosmos
+					<h2><a href="http://sigmusic.github.io/tonal-starfield">
+						Tonal Starfield
 					</a></h2>
 					How does it work?
 				</section>
@@ -113,7 +144,7 @@
 					<h2>What is a (musical) instrument?</h2>
 					<section><!-- empty --></section>
 					<section>
-						<iframe data-autoplay width="420" height="315" src="https://www.youtube.com/embed/d1JA-nh0IfI?start=8" frameborder="0" allowfullscreen></iframe>
+						<iframe data-autoplay width="840" height="630" src="https://www.youtube.com/embed/d1JA-nh0IfI?start=8" frameborder="0" allowfullscreen></iframe>
 					</section>
 					<section>
 						<blockquote class="fragment" cite="http://en.wikipedia.org/wiki/Musical_instrument">
@@ -128,11 +159,6 @@
 				<!-- 10 minutes -->
 				<section id="instrument-demo">
 					<h2>Instrument(s) demo</h2>
-				</section>
-
-				<!-- 5 minutes (optional) -->
-				<section id="tonal-starfield">
-					<h2><a href="http://sigmusic.github.io/tonal-starfield">Tonal Starfield</a></h2>
 				</section>
 			</div>
 
